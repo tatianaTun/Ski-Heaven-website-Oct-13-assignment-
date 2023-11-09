@@ -1,0 +1,125 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+nav a:hover {
+  background: #555;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+img,
+video {
+  width: 20%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+.grid-container {
+  display: grid;
+  background-color: rgb(190, 225, 255);
+  grid-template-columns: repeat(3, 1fr); /* Starts with 3 columns */
+  /* grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Creates 3 columns with equal width */
+  /* grid-template-rows: repeat(
+    2,
+    auto
+  ); Creates 2 rows; height will adjust to content  */
+  gap: 10px; /* Adjusts the gap between grid items */
+  margin: 20px;
+}
+/* Responsive adjustment */
+@media (max-width: 600px) { /* Adjusts the breakpoint as needed */
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns when the screen width is 600px or less */
+  }
+}
+
+@media (max-width: 400px) { /* Adjusts the breakpoint as needed */
+  .grid-container {
+      grid-template-columns: 1fr; /* Changes to 1 column (full width items) for very small screens */
+  }
+}
+
+.grid-item {
+  margin: 10px;
+  overflow: hidden; /* Ensures nothing spills out of the grid item , needed for the images inside*/
+  padding:10px;
+  border: 3px solid #cccbcb;
+}
+.grid-item h3 {
+  text-align: center;
+}
+.grid-item img {
+  width: 100%; /* Make the image fill the width */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  object-position: center; /* Centers the image within the element */
+  display: block; /* Removes bottom space/margin */
+  position: bottom;
+}
+
+.form-section {
+  background: #f4f4f4;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+.form-section form {
+  display: grid;
+  grid-gap: 1rem;
+}
+.form-section label {
+  display: block;
+}
+.table-section table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+.table-section th,
+.table-section td {
+  text-align: left;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+.table-section th {
+  background: #333;
+  color: #fff;
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
